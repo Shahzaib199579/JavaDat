@@ -8,6 +8,8 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.Node;
+import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 
 public class App {
@@ -46,12 +48,25 @@ public class App {
         // jsoup
         @SuppressWarnings("rawtypes")
         String url = "http://en.wikipedia.org/wiki/Java_(programming_language)";
-
+        
+        @SuppressWarnings("rawtypes")
         Connection conn = Jsoup.connect(url);
+
+        @SuppressWarnings("rawtypes")
         Document doc = conn.get();
 
         Element content = doc.getElementById("mw-content-text");
         Elements paragraphs = content.select("p");
-        System.out.println("ok");
+        Element firstPara = paragraphs.get(0);
+        
+        // @SuppressWarnings("rawtypes")
+        // Iterable<Node> iter = new WikiNodeIterable(firstPara);
+        // for (Node n : iter)
+        // {
+        //     if (n instanceof TextNode)
+        //     {
+        //         System.out.print(n);
+        //     }
+        // }
     }
 }
