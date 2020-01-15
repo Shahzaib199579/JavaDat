@@ -47,6 +47,7 @@ public class MyArrayList<T> implements List<T> {
 		// TODO: FILL THIS IN!
 		if (size >= array.length) {
 
+			@SuppressWarnings("unchecked")
 			T[] bigger = (T[]) new Object[array.length * 2];
 			System.arraycopy(array, 0, bigger, 0, array.length);
 			array = bigger;
@@ -211,6 +212,7 @@ public class MyArrayList<T> implements List<T> {
 		}
 
 		size--;
+
 		return (T) temp;
 	}
 
@@ -236,6 +238,7 @@ public class MyArrayList<T> implements List<T> {
 			Object temp = new Object();
 			temp = (T) this.get(index);
 			array[index] = element;
+
 			return (T) temp;
 		}
 

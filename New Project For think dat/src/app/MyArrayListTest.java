@@ -2,11 +2,9 @@ package app;
 
 //import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import org.junit.Before;
@@ -52,7 +50,7 @@ public class MyArrayListTest {
 			mylist.add(i);
 		}
 		// System.out.println(Arrays.toString(mal.toArray()));
-		assertEquals(new Integer(19), mylist.get(18));
+		assertEquals(Integer.valueOf(19), mylist.get(18));
 	}
 
 	/**
@@ -63,7 +61,7 @@ public class MyArrayListTest {
 		mylist.add(1, 5);
 		// System.out.println(Arrays.toString(mal.toArray()));
 		// assertThat(mylist.get(1), is(new Integer(5)));
-		assertEquals(new Integer(5), mylist.get(1));
+		assertEquals(Integer.valueOf(5), mylist.get(1));
 		// assertThat(mylist.size(), is(4));
 		assertEquals(4, (long) mylist.size());
 
@@ -82,12 +80,12 @@ public class MyArrayListTest {
 		mylist.add(0, 6);
 		// System.out.println(Arrays.toString(mal.toArray()));
 		// assertThat(mylist.get(0), is(6));
-		assertEquals(new Integer(6), mylist.get(0));
+		assertEquals(Integer.valueOf(6), mylist.get(0));
 
 		mylist.add(5, 7);
 		// System.out.println(Arrays.toString(mal.toArray()));
 		// assertThat(mylist.get(5), is(new Integer(7)));
-		assertEquals(new Integer(7), mylist.get(5));
+		assertEquals(Integer.valueOf(7), mylist.get(5));
 	}
 
 	/**
@@ -102,7 +100,7 @@ public class MyArrayListTest {
 		assertEquals((long) mylist.size(), 12);
 		// assertThat(mylist.get(5), is(new Integer(3)));
 
-		assertEquals(new Integer(3), mylist.get(5));
+		assertEquals(Integer.valueOf(3), mylist.get(5));
 	}
 
 	/**
@@ -139,11 +137,11 @@ public class MyArrayListTest {
 	public void testRemoveInt() {
 		Integer val = mylist.remove(1);
 		//assertThat(val, is(new Integer(2)));
-		assertEquals(val, (new Integer(2)));
+		assertEquals(val, (Integer.valueOf(2)));
 		//assertThat(mylist.size(), is(2));
 		assertEquals(2, (long) mylist.size());
 		//assertThat(mylist.get(1), is(new Integer(3)));
-		assertEquals((new Integer(3)), (new Integer(mylist.get(1))));
+		assertEquals((Integer.valueOf(3)), (Integer.valueOf(mylist.get(1))));
 	}
 
 	// /**
