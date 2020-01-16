@@ -5,6 +5,7 @@ package app;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.Iterator;
@@ -12,7 +13,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.jsoup.nodes.Node;
-
 
 /**
  * Performs a depth-first traversal of a jsoup Node.
@@ -30,7 +30,7 @@ public class WikiNodeIterable implements Iterable<Node> {
 	 * @param root
 	 */
 	public WikiNodeIterable(Node root) {
-	    this.root = root;
+		this.root = root;
 	}
 
 	@Override
@@ -56,12 +56,12 @@ public class WikiNodeIterable implements Iterable<Node> {
 		 */
 		public WikiNodeIterator(Node node) {
 			stack = new ArrayDeque<Node>();
-		    stack.push(root);
+			stack.push(root);
 		}
 
 		@Override
 		public boolean hasNext() {
-			return !stack.isEmpty();
+			return !((Collection<Node>) stack).isEmpty();
 		}
 
 		@Override
