@@ -10,6 +10,7 @@ import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 
 public class App {
+    
     public static void main(String[] args) throws Exception {
         // ListClientExample lce = new ListClientExample();
         // @SuppressWarnings("rawtypes")

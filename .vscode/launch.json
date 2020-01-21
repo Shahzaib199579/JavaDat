@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MyLinearMap",
+            "request": "launch",
+            "mainClass": "app.MyLinearMap",
+            "projectName": "New Project For think dat"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - App",
             "request": "launch",
             "mainClass": "app.App",
