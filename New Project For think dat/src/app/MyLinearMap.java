@@ -107,7 +107,8 @@ public class MyLinearMap<K, V> implements Map<K, V> {
 	public V get(Object key) {
 		// TODO: FILL THIS IN!
 		for (Map.Entry<K, V> e : entries) {
-			if (key == e.getKey()) {
+			K result = e.getKey();
+			if (equals(key, e.getKey())) {
 				return e.getValue();
 			}
 		}
