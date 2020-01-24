@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - JedisMaker",
+            "request": "launch",
+            "mainClass": "app.JedisMaker",
+            "projectName": "New Project For think dat"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MyHashMap",
             "request": "launch",
             "mainClass": "app.MyHashMap",

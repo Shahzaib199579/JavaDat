@@ -1,0 +1,1 @@
+redis://redistogo:88c914bfcb4915c78c349ca6a7a8e4c0@spinyfin.redistogo.com:10034/

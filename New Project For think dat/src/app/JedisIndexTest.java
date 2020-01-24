@@ -1,6 +1,6 @@
 package app;
 
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
 //import static org.hamcrest.CoreMatchers.*;
 
 import java.io.IOException;
@@ -63,10 +63,10 @@ public class JedisIndexTest {
 	/**
 	 * Test method for {@link JedisIndex#getCounts(java.lang.String)}.
 	 */
-	@Test
-	public void testGetCounts() {
-		Map<String, Integer> map = index.getCounts("the");
-		assertThat(map.get(url1), is(339));
-		assertThat(map.get(url2), is(264));
-	}
+	// @Test
+	// public void testGetCounts() {
+	// 	Map<String, Integer> map = index.getCounts("the");
+	// 	assertThat(map.get(url1), is(339));
+	// 	assertThat(map.get(url2), is(264));
+	// }
 }
